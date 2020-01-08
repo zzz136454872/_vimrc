@@ -61,6 +61,7 @@ set autochdir 		"自动设置当前目录为正在编辑的目录
 set scrolloff=5 	"在光标接近底端或顶端时，自动下滚或上滚
 set showtabline=2 	"设置显是显示标签栏
 set autoread 		"设置当文件在外部被修改，自动更新该文件
+set ignorecase
 set softtabstop=4     
 set shiftwidth=4     
 set expandtab       
@@ -126,3 +127,6 @@ func! CompileRun()
         exec '!%<.exe'
     endif                                                                              
 endfunc 
+
+
+

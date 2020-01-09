@@ -111,10 +111,10 @@ nmap <C-R> :call CompileRun()<CR>
 func! CompileRun()
     exec 'update' 
     if &filetype == 'c' 
-        exec '!gcc % -o %<.exe'
+        exec '!gcc % -o %<.exe -Wall'
         exec '!%<.exe'
     elseif &filetype == 'cpp'
-        exec '!g++ % -o %<.exe'
+        exec '!g++ % -o %<.exe -Wall'
         exec '!%<.exe'
     elseif &filetype == 'python'
         exec '!python %'

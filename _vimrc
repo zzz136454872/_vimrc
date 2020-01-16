@@ -95,7 +95,7 @@ set ai! "设置自动缩进
 "set fdm=indent "
 set number 
 set noswapfile
-
+set nofoldenable 
 
 call plug#begin('$Vim\vimfiles\plug\')
     Plug 'scrooloose/nerdtree'

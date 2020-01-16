@@ -94,8 +94,8 @@ set ai! "设置自动缩进
 "hi CursorLine   cterm=NONE ctermbg=darkred ctermfg=white guibg=darkred guifg=white
 "set fdm=indent "
 set number 
+set noswapfile
 
-set nofoldenable
 
 call plug#begin('$Vim\vimfiles\plug\')
     Plug 'scrooloose/nerdtree'
@@ -105,8 +105,8 @@ call plug#end()
 
 
 autocmd GUIEnter * simalt ~x
-au VimEnter *  NERDTree
-nmap <C-R> :call CompileRun()<CR>
+autocmd VimEnter *  NERDTree
+nmap <C-U> :call CompileRun()<CR>
 
 func! CompileRun()
     exec 'update' 

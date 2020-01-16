@@ -5,7 +5,7 @@
 windows 
 
 ## appearance
-![pict](d:/gvim/appearance.jpg)
+![pict](https://github.com/zzz136454872/_vimrc/blob/master/appearance.jpg)
 
 ## functions 
 
@@ -13,7 +13,7 @@ Use Ctrl+u to compile and(or) run your code.
 
 1. autocompile
     now it can compile (or run) c, cpp, java and go. 
-    of course, it needs the help of compilers. 
+    of course, it needs the compiler. 
 
 ## plug-ins 
 1. vim-plug 

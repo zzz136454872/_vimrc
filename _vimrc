@@ -107,6 +107,7 @@ call plug#end()
 autocmd GUIEnter * simalt ~x
 autocmd VimEnter *  NERDTree
 nmap <C-U> :call CompileRun()<CR>
+nmap <C-N> :w<CR>:!mingw32-make<CR>
 
 func! CompileRun()
     exec 'update' 
@@ -127,6 +128,4 @@ func! CompileRun()
         exec '!%<.exe'
     endif                                                                              
 endfunc 
-
-
 

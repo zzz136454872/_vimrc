@@ -13,7 +13,12 @@ Use Ctrl+u to compile and(or) run your code.
 
 1. autocompile
     now it can compile (or run) c, cpp, java and go. 
+
     of course, it needs the compiler. 
+2. automake
+    press <C-N> to run mingw32-make
+
+    needs gcc tool chain. 
 
 ## plug-ins 
 1. vim-plug 

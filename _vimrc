@@ -123,6 +123,10 @@ func! CompileRun()
         exec 'silent !start %:p'
     elseif &filetype == 'java'
         exec '!javac %'
+    elseif &filetype == 'tex'
+        exec '!pdflatex %'
+        "exec '!texworks %<.pdf' the command will run only once so do it
+        "manually. 
     elseif &filetype =='go'
         exec '!go build %'
         exec '!%<.exe'

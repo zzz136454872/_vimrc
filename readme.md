@@ -12,7 +12,7 @@ windows
 Use Ctrl+u to compile and(or) run your code. 
 
 1. autocompile
-    now it can compile (or run) c, cpp, latex, java and go. 
+    now it can compile (or run) c, cpp, latex, java, go and even arduino. 
 
     of course, it needs the compiler. 
 2. automake
@@ -26,6 +26,20 @@ Use Ctrl+u to compile and(or) run your code.
 2. nerdtree
 3. vim-latex
 4. vim-markdown 
+
+## software dependencies
+
+1. gcc
+2. g++
+2. mingw32-make
+3. jdk
+4. go
+5. arduino
+6. texlive
+
+Install what you need. 
+
+
 
 ## for linux 
 a similar gvim configure file is at

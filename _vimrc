@@ -129,6 +129,10 @@ func! CompileRun()
         "manually. 
     elseif &filetype == 'plaintex'
         exec '!pdflatex %'
+    "comment the following two lines if
+    "arduino is not needed. 
+    elseif &filetype == 'arduino'
+        exec '!d:/arduino/arduino --upload %'
     elseif &filetype =='go'
         exec '!go build %'
         exec '!%<.exe'

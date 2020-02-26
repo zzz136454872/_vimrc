@@ -127,6 +127,8 @@ func! CompileRun()
         exec '!pdflatex %'
         "exec '!texworks %<.pdf' the command will run only once so do it
         "manually. 
+    elseif &filetype == 'plaintex'
+        exec '!pdflatex %'
     elseif &filetype =='go'
         exec '!go build %'
         exec '!%<.exe'

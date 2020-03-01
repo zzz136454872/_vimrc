@@ -47,7 +47,7 @@ set guifont=Consolas:h12
  
 filetype on
 filetype plugin indent on
-colorscheme koehler
+colorscheme torte
 set helplang=cn		"设置中文帮助
 set history=500		"保留历史记录
 set tabstop=4		"设置tab的跳数

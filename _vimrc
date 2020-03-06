@@ -124,7 +124,7 @@ func! CompileRun()
     elseif &filetype == 'java'
         exec '!javac %'
     elseif &filetype == 'tex'
-        exec '!pdflatex %'
+        exec '!xelatex %'
         "exec '!texworks %<.pdf' the command will run only once so do it
         "manually. 
     elseif &filetype == 'plaintex'

@@ -128,7 +128,7 @@ func! CompileRun()
         "exec '!texworks %<.pdf' the command will run only once so do it
         "manually. 
     elseif &filetype == 'plaintex'
-        exec '!pdflatex %'
+        exec '!xelatex %'
     "comment the following two lines if
     "arduino is not needed. 
     elseif &filetype == 'arduino'

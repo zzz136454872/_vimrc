@@ -112,7 +112,7 @@ nmap <C-N> :w<CR>:!mingw32-make<CR>
 func! CompileRun()
     exec 'update' 
     if &filetype == 'c' 
-        exec '!gcc % -o %<.exe -Wall'
+        exec '!gcc % -o %<.exe -Wall -fopenmp'
         exec '!%<.exe'
     elseif &filetype == 'cpp'
         exec '!g++ % -o %<.exe -Wall'

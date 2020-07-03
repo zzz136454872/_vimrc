@@ -1,5 +1,9 @@
 # a vim configure file
 
+This is practical vim config file for windows. 
+
+[github.com/zzz136454872/_vimrc](https://github.com/zzz136454872/_vimrc)
+
 ## platform
 
 windows 
@@ -27,6 +31,9 @@ Use Ctrl+u to compile and(or) run your code.
 3. vim-latex
 4. vim-markdown 
 
+these will be installed using`:PlugInstall`after vim-plug is installed.
+Before this command, delete what you don't need and add what else you need. 
+
 ## software dependencies
 
 1. gcc
@@ -45,8 +52,6 @@ Install what you need.
 a similar gvim configure file is at
 [vimrc_for_ubuntu](https://github.com/zzz136454872/vimrc_for_ubuntu)
 
-these will be installed using`:PlugInstall`after vim-plug is installed.
-Before this command, delete what you don't need and add what else you need. 
 
 *if anything in need contract me at [zzz136454872@163.com](zzz136454872@163.com)*
 

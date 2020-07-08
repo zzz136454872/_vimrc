@@ -123,6 +123,8 @@ func! CompileRun()
         exec '!python %'
     elseif &filetype == 'markdown'
         exec 'silent !start %:p'
+    elseif &filetype == 'asm'
+        exec '!nasm % -o %<.img'
     elseif &filetype == 'java'
         exec '!javac %'
     elseif &filetype == 'tex'

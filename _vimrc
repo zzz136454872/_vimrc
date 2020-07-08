@@ -101,8 +101,8 @@ call plug#begin('$Vim\vimfiles\plug\')
     Plug 'scrooloose/nerdtree'
     Plug 'plasticboy/vim-markdown'
     Plug 'vim-latex/vim-latex'
+    Plug 'airblade/vim-gitgutter'
 call plug#end()
-
 
 autocmd GUIEnter * simalt ~x
 autocmd VimEnter *  NERDTree

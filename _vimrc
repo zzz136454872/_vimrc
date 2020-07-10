@@ -111,35 +111,35 @@ nmap <C-N> :w<CR>:!mingw32-make<CR>
 
 func! CompileRun()
     exec 'update' 
-    if &filetype == 'c' 
+    if &filetype == 'c' " compile and run c 
         exec '!gcc % -o %<.exe -Wall -fopenmp' 
-        "exec '!gcc % -o %<.exe -Wall'
-        exec '!%<.exe'
-    elseif &filetype == 'cpp'
+        "exec '!gcc % -o %<.exe -Wall' "without openmp
+        exec '!%<.exe' 
+    elseif &filetype == 'cpp' "compile and run c plus plus with openmp
         exec '!g++ % -o %<.exe -Wall -fopenmp'
-        "exec '!g++ % -o %<.exe -Wall'
+        "exec '!g++ % -o %<.exe -Wall' "without openmp
         exec '!%<.exe'
-    elseif &filetype == 'python'
+    elseif &filetype == 'python' "run python
         exec '!python %'
-    elseif &filetype == 'markdown'
+    elseif &filetype == 'markdown' " system default open for markdown 
         exec 'silent !start %:p'
-    elseif &filetype == 'asm'
-        exec '!nasm % -o %<.img'
-    elseif &filetype == 'dosbatch'
+    elseif &filetype == 'asm' " compile asm file
+        exec '!gcc % -o %<.img'
+    elseif &filetype == 'dosbatch' " run bat file
         exec '!%'
-    elseif &filetype == 'java'
+    elseif &filetype == 'java' " compile java 
         exec '!javac %'
-    elseif &filetype == 'tex'
+    elseif &filetype == 'tex' " compile latex file
         exec '!pdflatex %'
         "exec '!texworks %<.pdf' the command will run only once so do it
         "manually. 
-    elseif &filetype == 'plaintex'
+    elseif &filetype == 'plaintex' "compile latex file
         exec '!pdflatex %'
     "comment the following two lines if
     "arduino is not needed. 
-    elseif &filetype == 'arduino'
+    elseif &filetype == 'arduino' "compile arduino file
         exec '!d:/arduino/arduino --upload %'
-    elseif &filetype =='go'
+    elseif &filetype =='go' "compile and run go 
         exec '!go build %'
         exec '!%<.exe'
     endif                                                                              

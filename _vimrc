@@ -107,7 +107,7 @@ call plug#end()
 autocmd GUIEnter * simalt ~x
 autocmd VimEnter *  NERDTree
 nmap <C-U> :call CompileRun()<CR>
-nmap <C-N> :w<CR>:!mingw32-make<CR>
+nmap <C-N> :w<CR>:!make<CR>
 
 func! CompileRun()
     exec 'update' 
@@ -123,8 +123,8 @@ func! CompileRun()
         exec '!python %'
     elseif &filetype == 'markdown' " system default open for markdown 
         exec 'silent !start %:p'
-    elseif &filetype == 'asm' " compile asm file
-        exec '!gcc % -o %<.img'
+    elseif &filetype == 'asm' " compile and run asm file
+        exec '!gcc % -o %<.exe'
     elseif &filetype == 'dosbatch' " run bat file
         exec '!%'
     elseif &filetype == 'java' " compile java 

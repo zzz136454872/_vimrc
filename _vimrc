@@ -107,7 +107,15 @@ call plug#end()
 autocmd GUIEnter * simalt ~x
 autocmd VimEnter *  NERDTree
 nmap <C-U> :call CompileRun()<CR>
+nmap <C-D> :call PythonDebug()<CR>
 nmap <C-N> :w<CR>:!make<CR>
+
+func! PythonDebug()
+    exec 'update'
+    if &filetype=='python'
+        exec '!python -m ipdb %'
+    endif
+endfunc
 
 func! CompileRun()
     exec 'update' 

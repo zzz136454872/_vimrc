@@ -24,6 +24,9 @@ Use Ctrl+u to compile and(or) run your code.
 
     needs gcc tool chain. 
 
+3. python debug
+    press <C-D> to use ipdb to debug a python file. 
+
 ## plug-ins 
 1. vim-plug 
     It needs to be installed manually. 

@@ -131,6 +131,8 @@ func! CompileRun()
         exec '!python %'
     elseif &filetype == 'markdown' " system default open for markdown 
         exec 'silent !start %:p'
+    elseif &filetype == 'cmake'
+        exec '!cmake . -G "Unix Makefiles"'
     elseif &filetype == 'asm' " compile and run asm file
         exec '!gcc % -o %<.exe'
     elseif &filetype == 'dosbatch' " run bat file
@@ -139,12 +141,8 @@ func! CompileRun()
         exec '!javac %'
     elseif &filetype == 'tex' " compile latex file
         exec '!pdflatex %'
-        "exec '!texworks %<.pdf' the command will run only once so do it
-        "manually. 
     elseif &filetype == 'plaintex' "compile latex file
         exec '!pdflatex %'
-    "comment the following two lines if
-    "arduino is not needed. 
     elseif &filetype == 'arduino' "compile arduino file
         exec '!d:/arduino/arduino --upload %'
     elseif &filetype =='go' "compile and run go 

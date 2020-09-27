@@ -120,13 +120,9 @@ endfunc
 func! CompileRun()
     exec 'update' 
     if &filetype == 'c' " compile and run c 
-        exec '!gcc % -o %<.exe -Wall -fopenmp' 
-        "exec '!gcc % -o %<.exe -Wall' "without openmp
-        exec '!%<.exe' 
+        exec '!gcc % -o %<.exe -Wall -fopenmp && %<.exe' 
     elseif &filetype == 'cpp' "compile and run c plus plus with openmp
-        exec '!g++ % -o %<.exe -Wall -fopenmp'
-        "exec '!g++ % -o %<.exe -Wall' "without openmp
-        exec '!%<.exe'
+        exec '!g++ % -o %<.exe -Wall -fopenmp && %<.exe'
     elseif &filetype == 'python' "run python
         exec '!python %'
     elseif &filetype == 'markdown' " system default open for markdown 
@@ -146,8 +142,7 @@ func! CompileRun()
     elseif &filetype == 'arduino' "compile arduino file
         exec '!d:/arduino/arduino --upload %'
     elseif &filetype =='go' "compile and run go 
-        exec '!go build %'
-        exec '!%<.exe'
+        exec '!go build % && %<.exe'
     endif                                                                              
 endfunc 
 

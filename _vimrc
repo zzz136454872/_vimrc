@@ -53,8 +53,8 @@ set history=500		"保留历史记录
 set tabstop=4		"设置tab的跳数
 set expandtab
 set backspace=2 	"设置退格键可用
-set wrap 		"设置自动换行
-"set nowrap 		"设置不自动换行
+set wrap 		"设置自动折行
+"set nowrap 		"设置不自动折行
 set linebreak 		"整词换行，与自动换行搭配使用
 "set list 		"显示制表符
 set autochdir 		"自动设置当前目录为正在编辑的目录
@@ -96,6 +96,7 @@ set ai! "设置自动缩进
 set number 
 set noswapfile
 set nofoldenable 
+set textwidth=20000 "不使用自动换行
 
 call plug#begin('$Vim\vimfiles\plug\')
     Plug 'scrooloose/nerdtree'

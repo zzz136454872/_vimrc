@@ -95,26 +95,29 @@ set ai! "设置自动缩进
 "set fdm=indent "
 set number 
 set noswapfile
-set nofoldenable 
-set textwidth=20000 "不使用自动换行
 
 call plug#begin('$Vim\vimfiles\plug\')
     Plug 'scrooloose/nerdtree'
     Plug 'plasticboy/vim-markdown'
     Plug 'vim-latex/vim-latex'
     Plug 'airblade/vim-gitgutter'
+    "Plug 'fatih/vim-go'
+    Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 autocmd GUIEnter * simalt ~x
 autocmd VimEnter *  NERDTree
 nmap <C-U> :call CompileRun()<CR>
-nmap <C-D> :call PythonDebug()<CR>
+nmap <C-D> :call Debug()<CR>
 nmap <C-N> :w<CR>:!make<CR>
 
-func! PythonDebug()
+func! Debug()
     exec 'update'
     if &filetype=='python'
         exec '!python -m ipdb %'
+    "//elsef &filetype=='go'
+    else
+        exec '!cmd'
     endif
 endfunc
 
@@ -146,4 +149,6 @@ func! CompileRun()
         exec '!go build % && %<.exe'
     endif                                                                              
 endfunc 
+
+set textwidth=20000 "不使用自动换行
 

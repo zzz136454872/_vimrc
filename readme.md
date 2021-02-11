@@ -6,7 +6,7 @@ This is practical vim config file for windows.
 
 ## platform
 
-windows 
+windows 10
 
 ## appearance
 ![pict](https://github.com/zzz136454872/_vimrc/blob/master/appearance.jpg)
@@ -27,15 +27,21 @@ Use Ctrl+u to compile and(or) run your code.
 3. python debug
     press <C-D> to use ipdb to debug a python file. 
 
+4. autocomplete
+    with the help of ycm
+
 ## plug-ins 
 1. vim-plug 
     It needs to be installed manually. 
 2. nerdtree
 3. vim-latex
 4. vim-markdown 
+5. YouCompleteMe
 
 these will be installed using`:PlugInstall`after vim-plug is installed.
 Before this command, delete what you don't need and add what else you need. 
+
+YouCompleteMe may need some extra configure. 
 
 ## software dependencies
 
@@ -46,10 +52,9 @@ Before this command, delete what you don't need and add what else you need.
 4. go
 5. arduino
 6. texlive
+7. python3
 
 Install what you need. 
-
-
 
 ## for linux 
 a similar gvim configure file is at

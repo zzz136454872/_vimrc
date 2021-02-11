@@ -29,7 +29,7 @@ function MyDiff()
 endfunction
  
  
-"设置文件的代码形式 utf8
+"设置文件的代码格式 utf8
 set encoding=utf-8
 set termencoding=utf-8
 set fileencoding=utf-8
@@ -95,6 +95,7 @@ set ai! "设置自动缩进
 "set fdm=indent "
 set number 
 set noswapfile
+set pythonthreedll=python37.dll
 
 call plug#begin('$Vim\vimfiles\plug\')
     Plug 'scrooloose/nerdtree'

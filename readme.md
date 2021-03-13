@@ -30,9 +30,11 @@ Use Ctrl+u to compile and(or) run your code.
 4. autocomplete
     with the help of ycm
 
+5. go to defination
+    this can be done through ctags or ycm. 
 ## plug-ins 
 1. vim-plug 
-    It needs to be installed manually. 
+    This needs to be installed manually. 
 2. nerdtree
 3. vim-latex
 4. vim-markdown 
@@ -41,7 +43,8 @@ Use Ctrl+u to compile and(or) run your code.
 these will be installed using`:PlugInstall`after vim-plug is installed.
 Before this command, delete what you don't need and add what else you need. 
 
-YouCompleteMe may need some extra configure. 
+YouCompleteMe may need some extra configure and realy long time. 
+If you don't need it, comment that line. 
 
 ## software dependencies
 
@@ -53,13 +56,13 @@ YouCompleteMe may need some extra configure.
 5. arduino
 6. texlive
 7. python3
+8. ctags
 
 Install what you need. 
 
 ## for linux 
 a similar gvim configure file is at
 [vimrc_for_ubuntu](https://github.com/zzz136454872/vimrc_for_ubuntu)
-
 
 *if anything in need contract me at [zzz136454872@163.com](zzz136454872@163.com)*
 

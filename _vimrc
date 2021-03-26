@@ -114,6 +114,10 @@ nmap <C-U> :call CompileRun()<CR>
 nmap <C-D> :call Debug()<CR>
 nmap <C-N> :w<CR>:!make<CR>
 
+" config for nerdtree
+nmap <leader>n :NERDTree<CR>
+nmap <leader>t :NERDTreeToggle<CR>
+
 func! Debug()
     exec 'update'
     if &filetype=='python'
